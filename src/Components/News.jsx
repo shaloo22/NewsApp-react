@@ -18,7 +18,7 @@ const News = () => {
     const fetchNews = async () => {
         if (!query) return;
 
-        const apiKey = "61a75129785e4d20bdcf302101b9d386";
+        const apiKey = process.env.REACT_APP_NEWS_API_KEY;
         const url = `https://newsapi.org/v2/everything?q=${query}&apiKey=${apiKey}`;
 
         try {
